@@ -37,6 +37,9 @@ import { AccountDetailsComponent } from './login/account-details/account-details
 import { WearhouseComponent } from './wearhouse/wearhouse.component';
 import { InventoryInfoShowComponent } from './admin/inventory-info-show/inventory-info-show.component';
 import { ServiceComponent } from './service/service.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { CustomerHeaderComponent } from './login/customer-header/customer-header.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +74,9 @@ import { ServiceComponent } from './service/service.component';
     WearhouseComponent,
     InventoryInfoShowComponent,
     ServiceComponent,
+    HeaderComponent,
+    FooterComponent,
+    CustomerHeaderComponent,
   ],
   imports: [
     BrowserModule,

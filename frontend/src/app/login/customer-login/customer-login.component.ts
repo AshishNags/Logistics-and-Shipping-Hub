@@ -22,14 +22,7 @@ export class CustomerLoginComponent implements OnInit {
         this.router.navigate(["login"]);
     }
   }
-  public logout(){
-    this.authService.id = '';
-
-
-    console.log("clicked logout button");
-    this.router.navigate(["home"]);
-
-  }
+  
 
 
   toTracking() {
