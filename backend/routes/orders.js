@@ -21,6 +21,9 @@ router.get(
   '/viewOrder/:u_id', orderController.viewOrder);
 
 router.get(
+  '/orderdetails/', orderController.orderdetails);
+
+router.get(
   '/viewModify/:o_id', orderController.viewModify);
 
   router.get(

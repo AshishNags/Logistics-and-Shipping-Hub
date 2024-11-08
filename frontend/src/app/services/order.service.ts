@@ -121,6 +121,14 @@ export class OrderService {
 
     }
 
+    getOrderDetails(): Observable<{}>{
+      return this.http
+        .get<{}>(`${this.url}/orderdetails` ,{ responseType: "json" })
+        .pipe(
+          catchError(this.errorHandlerService.handleError<Order[]>("getPickupData",[]))
+        );
+    }
+
     getPickupData(oid:string):Observable<Order[]>{
       console.log("inside get PickupData");
       return this.http

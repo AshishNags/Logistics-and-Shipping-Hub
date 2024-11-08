@@ -88,6 +88,9 @@ module.exports = class OrderDetails{
  
   }
 
+  static orderdetails(){
+    return db.execute('SELECT * FROM orderdetails JOIN orderstatus ON orderdetails.o_id=orderstatus.o_id');
+  }
 
 
   static getWarehouse1Data1(){

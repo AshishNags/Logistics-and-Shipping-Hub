@@ -27,7 +27,7 @@
   </div>
 </nav>
 
-<div class="container-fluid p-0">
+<!-- <div class="container-fluid p-0">
     <br>
     <br>
     <div class="container">
@@ -48,7 +48,24 @@
     <br>
     <button class=" btn-primary py-2 px-4 d-none d-lg-block">Update</button>
 </div>
-  </div>
+  </div> -->
+
+  <table>
+    <tr class="row">
+      <th class="col-4"> Order id</th>
+      <th class="col-2"> Sender</th>
+      <th class="col-2"> Reciever</th>
+      <th class="col-2"> delivary Date</th>
+      <th class="col-2"> Status</th>
+    </tr>
+    <tr *ngFor="let order of orders" class="row">
+      <td class="col-4">{{order.o_id}}</td>
+      <td class="col-2">{{order.fName}}</td>
+      <td class="col-2">{{order.dName}}</td>
+      <td class="col-2">{{order.dDate}}</td>
+      <td class="col-2">{{order.orderStatus}}</td>
+    </tr>
+  </table>
 
 
  <!-- Footer Start -->

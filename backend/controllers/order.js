@@ -398,6 +398,28 @@ exports.updateWearhouse1 = async (req, res, next)=> {
 };
 
 
+exports.orderdetails = async (req, res, next)=> {
+
+  console.log(req.body);
+  
+
+  try {
+    
+    const [result] = await OrderDetails.orderdetails();
+  
+   //result = await OrderDetails.placeOrderStatus(order.o_id, uId, o_status, pDate,dDate,sp);
+   console.log(result);
+
+    res.status(200).json(result);
+  } catch (err) {
+    if (!err.statusCode) {
+      err.statusCode = 500;
+    }
+    next(err);
+  }
+};
+
+
 
 exports.orderPicked = async (req, res, next)=> {
 
